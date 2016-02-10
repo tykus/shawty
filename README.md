@@ -1,6 +1,6 @@
 ## Shawty
 
-A URL shortener using Sinatra using Redis for persistence.
+A very simple URL shortener using Sinatra using Redis for persistence.
 
 `$ redis-server`
 
