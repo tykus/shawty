@@ -1,5 +1,12 @@
+require 'sinatra/config_file'
+
 class Shawty < Sinatra::Base
-    $redis = Redis.new host: 'localhost', port: 6379
+
+    register Sinatra::ConfigFile
+
+    config_file 'settings.yml'
+
+    $redis = Redis.new host: settings.redis_host, port: settings.redis_port
 
     get '/' do
       erb :index
